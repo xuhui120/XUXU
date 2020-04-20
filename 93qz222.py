@@ -1,7 +1,8 @@
+
 import os
 import re
 
-with open("C:\\Users\\Administrator\\Desktop\\report.txt") as f:
+with open("report.txt") as f:
     lines = f.readlines()
     print(lines)
     print(type(lines))
@@ -40,14 +41,15 @@ for i in ddd[1:]:
 print(ii)
 #############################################################计算每课的汇总及平均分
 cd=len(ddd)-1
+dc=len(ddd)
 print(cd)
 pj=[]
 for kkk in range(1,10):
     pinjun=0
-    zonfeng = 0
-
-    for ttt in ii[1:]:
-        zonfeng=zonfeng+int(ttt[kkk])
+    zonfeng=0
+    for ttt in range(1,31):
+        zonfeng=zonfeng+int(ddd[ttt][kkk])
+    print(zonfeng)
     pinjun=round(zonfeng/cd,2)
     pj.append(str(pinjun))
     zzz = 0
@@ -92,15 +94,11 @@ for i in xinapai[0:]:
     print(xfenshu)
 print("**************************")
 ####################:###############写入文件
-with open("C:\\Users\\Administrator\\Desktop\\result.txt", "w") as ff:
+with open("result.txt", "w") as ff:
     aaa= "  ".join(biaotou)
-    print(aaa)
     ff.writelines(str(aaa)+'\n')
     for i in xfenshu:
         for k in i:
             xxx="    ".join("%s"% g for g in i)
-            print()
-            print(xxx)
         ff.writelines(xxx+'\n')
     ff.close()
-
