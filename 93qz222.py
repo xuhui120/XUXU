@@ -47,7 +47,7 @@ pj=[]
 for kkk in range(1,10):
     pinjun=0
     zonfeng=0
-    for ttt in range(1,31):
+    for ttt in range(1,dc):
         zonfeng=zonfeng+int(ddd[ttt][kkk])
     print(zonfeng)
     pinjun=round(zonfeng/cd,2)
