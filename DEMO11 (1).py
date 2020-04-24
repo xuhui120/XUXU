@@ -187,14 +187,6 @@ print(values)
 plot.plot(values)
 
 
-# In[87]:
-
-
-pl
-
-
-# In[ ]:
-
 
 
 
